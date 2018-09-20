@@ -17,6 +17,7 @@ body
     color: white;
     padding: 5px;
     text-decoration: none;
+
 }
 
 .fancyButton:hover
@@ -24,4 +25,12 @@ body
     transition: ease, .3s;
     background-color: limegreen;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.jumbotron
+{
+    text-align: center;
+    font-size: 32px;
 }
