@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # This tells our program the route to our server
 @app.route('/')
-def hello_world():
+def home1():
     return render_template('home.html')
 
 
