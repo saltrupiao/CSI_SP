@@ -4,9 +4,11 @@
 <h1 class="head">This is a test using flask</h1>
 <a class="fancyButton" href="/about">Go to About</a>
 <br>
-<h1 class="head">Form Test</h1>
+<h1 class="head">Enter two numbers to add</h1>
 <form method="POST">
-    <input type="text" name="txt">
+    <input type="number" name="num1"><br>
+    <h1 class="head">+</h1>
+    <input type="number" name="num2">
     <input type="submit" class="fancyButton" name="submit">
 </form>
 <p class="jumbotron">{{new_text}}</p>
