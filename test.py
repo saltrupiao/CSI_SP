@@ -15,6 +15,11 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/calc')
+def calc():
+    return render_template('calc.html')
+
+
 # https://stackoverflow.com/questions/12277933/send-data-from-a-textbox-into-flask
 @app.route('/', methods=['POST'])
 def my_form_post():
