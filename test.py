@@ -60,6 +60,5 @@ def divide(x, y):  # integer divide two integers
     return x/y
 
 
-
 if __name__ == '__main__':
     app.run(debug=True) # so the page refreshes live and doesn't need to be restarted
