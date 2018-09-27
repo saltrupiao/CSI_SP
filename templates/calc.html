@@ -5,6 +5,56 @@
 <meta charset="utf-8">
 <script src="Assets/Js/calc.js"></script>
 <link rel="stylesheet" href="static/styles/calc.css">
+<script>
+    function display(character)
+{
+    var screen = document.getElementById("display");
+
+    // The two special cases are the clear and eqauls buttons, otherwise we can just append the passed character to the end of our text box
+    if (character === "=")
+    {
+        screen.value = eval(screen.value);
+    }
+    else if (character === "c")
+    {
+        screen.value = " ";
+    }
+    else
+    {
+        screen.value = screen.value + character;
+    }
+
+}
+
+function checkKeyPress()
+{
+
+    var screen = document.getElementById("display");
+    // Array which stores all the valid entries' keycodes
+    var allValidEntries = [13, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 67, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 187, 189, 190, 191]
+    var currentPressedKey = event.keyCode;
+
+    // If the current pressed keycode is found inside the array of valid entries
+    if(allValidEntries.includes(currentPressedKey))
+    {
+       if(currentPressedKey === 13) // Enter Key
+       {
+           screen.value = eval(screen.value)
+       }
+        else if(currentPressedKey === 67) // C key, which will clear the textbox
+        {
+            event.preventDefault();
+            screen.value = " ";
+        }
+    }
+    else
+    {
+        // Prevents the default action, which is adding the character to the textbox (in most cases)
+        // This only fires if the key pressed is not a number or math symbol, as defined by the keycodes for those buttons stored in our array
+        event.preventDefault();
+    }
+}
+</script>
     <body>
         <div class="outerContainer">
             <div class="container">
