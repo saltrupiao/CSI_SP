@@ -24,6 +24,19 @@ def calcpage():
 @app.route('/calc', methods=['POST'])
 def calc():
     inp = request.form['display']  # pull expression from text field
+
+    try:  # Data validation, will prevent program crash if user enters invalid expression
+        eval(str(inp))
+    except ZeroDivisionError:  # Ex: 8/0
+        result = 'Error: Divide by Zero'
+        return render_template('calc.html', result=result)
+    except NameError:  # Ex: a+1
+        result = 'Error: Check your syntax'
+        return render_template('calc.html', result=result)
+    except SyntaxError:  # Ex: 3a+1, 3-+
+        result = 'Error: Check your syntax'
+        return render_template('calc.html', result=result)
+
     result = str(eval(str(inp)))  # builds string result from the evaluation of user input expression
     return render_template('calc.html', result=result)  # sends result to page
 
