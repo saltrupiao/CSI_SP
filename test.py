@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+
 # Placeholder for the application
 app = Flask(__name__)
 
@@ -23,7 +24,7 @@ def calcpage():
 @app.route('/calc', methods=['POST'])
 def calc():
     inp = request.form['display']  # pull expression from text field
-    result = "= " + str(eval(str(inp)))  # builds string result from the evaluation of user input expression
+    result = str(eval(str(inp)))  # builds string result from the evaluation of user input expression
     return render_template('calc.html', result=result)  # sends result to page
 
 
