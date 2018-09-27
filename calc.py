@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request
 
 
+@app.route('/calc', methods=['POST'])
 def calc():
-    input = (request.form['calculate'])
+    input = (request.form['display'])
     output = eval(input)
     result = "= " + str(output)
-    return render_template('calc.html', new_text=result)
+    return render_template('calc.html', result=result)
 
 # int1 = (request.form['num1'])
 # int2 = (request.form['num2'])

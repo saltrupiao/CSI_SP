@@ -20,8 +20,6 @@ body
 
 }
 
-<<<<<<< HEAD
-=======
 .calcBtn
 {
     transition: ease .3s;
@@ -48,7 +46,6 @@ body
     margin: 20px;
 }
 
->>>>>>> d94e4d55b1403aa0321b90b7d092b39f822f62be
 .fancyButton:hover
 {
     transition: ease, .3s;
