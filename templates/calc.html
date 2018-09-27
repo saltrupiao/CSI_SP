@@ -57,10 +57,10 @@ function checkKeyPress()
 </script>
     <body>
         <div class="outerContainer">
-            <div class="container">
+            <form class="container">
                 <input id="display" maxlength="30" onKeyDown="checkKeyPress()"/>
                 <input class="calcButton" value="C" id="c" type="button" onclick="display('c')"/>
-                <input class="calcButton" value="=" id="equals" type="button" onclick="display('=')"/>
+                <input class="calcButton" value="=" id="equals" type="submit" onclick="display('=')"/>
                 <input class="calcButton" value="1" id="one" type="button" onclick="display(1)"/>
                 <input class="calcButton" value="2" id="two" type="button" onclick="display(2)"/>
                 <input class="calcButton" value="3" id="three" type="button" onclick="display(3)"/>
@@ -76,7 +76,7 @@ function checkKeyPress()
                 <input class="calcButton" value="-" id="minus" type="button" onclick="display('-')"/>
                 <input class="calcButton" value="*" id="star" type="button" onclick="display('*')"/>
                 <input class="calcButton" value="/" id="slash" type="button" onclick="display('/')"/>
-            </div>
+            </form>
         </div>
     </body>
 </html>
