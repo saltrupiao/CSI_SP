@@ -20,6 +20,35 @@ body
 
 }
 
+<<<<<<< HEAD
+=======
+.calcBtn
+{
+    transition: ease .3s;
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    height: 20px;
+    width: 30px;
+    border: 1px solid grey;
+    border-bottom: 3px solid grey;
+    border-top: none;
+}
+
+.calcBtn:hover
+{
+    transition: ease .3s;
+    background-color: limegreen;
+    cursor: pointer;
+}
+
+.calc
+{
+    margin: 20px;
+}
+
+>>>>>>> d94e4d55b1403aa0321b90b7d092b39f822f62be
 .fancyButton:hover
 {
     transition: ease, .3s;

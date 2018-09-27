@@ -31,34 +31,5 @@ def my_form_post():
         return render_template('home.html', new_text=new_text)
 
 
-def compute(x, y, z):
-    if x == '+':
-        return add(y, z)
-    elif x == '-':
-        return subtract(y, z)
-    elif x == '*':
-        return multiply(y, z)
-    elif x == '/':
-        return divide(y,z)
-    else:
-        return 'null'
-
-
-def add(x, y):  # add two integers
-    return x + y
-
-
-def multiply(x, y):  # multiply two integers
-    return x * y
-
-
-def subtract(x, y):  # subtract two integers
-    return x - y
-
-
-def divide(x, y):  # integer divide two integers
-    return x/y
-
-
 if __name__ == '__main__':
     app.run(debug=True) # so the page refreshes live and doesn't need to be restarted

@@ -3,12 +3,20 @@
 {% block body%}
 <h1 class="head">This is a test using flask</h1>
 <a class="fancyButton" href="/about">Go to About</a>
+<<<<<<< HEAD
 <br>
 <h1 class="head">Enter two numbers to add</h1>
 <form method="POST">
     <input type="number" name="num1" value="1" onclick="this.focus();this.select()"><br>
     <input type="text" name="op" value="Enter '+' , '-' , '*' or '/' only!" onclick="this.focus();this.select()"><br>
     <input type="number" name="num2" value="1" onclick="this.focus();this.select()">
+=======
+<a class="fancyButton" href="/calc">Go to the Calculator</a>
+<br>
+<h1 class="head">Form Test</h1>
+<form method="POST">
+    <input type="text" name="txt">
+>>>>>>> d94e4d55b1403aa0321b90b7d092b39f822f62be
     <input type="submit" class="fancyButton" name="submit">
 </form>
 <p class="jumbotron">{{new_text}}</p>
