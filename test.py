@@ -26,7 +26,7 @@ def calc():
     inp = request.form['display']  # pull expression from text field
 
     try:  # Data validation, will prevent program crash if user enters invalid expression
-        eval(str(inp))
+        eval(inp)
     except ZeroDivisionError:  # Ex: 8/0
         result = 'Error: Divide by Zero'
         return render_template('calc.html', result=result)
@@ -37,7 +37,11 @@ def calc():
         result = 'Error: Check your syntax'
         return render_template('calc.html', result=result)
 
-    result = str(eval(str(inp)))  # builds string result from the evaluation of user input expression
+    result = eval(inp)  # builds string result from the evaluation of user input expression
+
+    if isinstance(result, float):
+        result = round(result, 3)
+
     return render_template('calc.html', result=result)  # sends result to page
 
 

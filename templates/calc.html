@@ -13,7 +13,7 @@ function getElement(){  //inserts this line, makes the form information look cle
     <body>
         <div class="outerContainer">
             <form class="container" method="POST">
-                <input id="display" type="text" maxlength="30" name="display" value="{{result}}" onclick="this.select()" onKeyDown="checkKeyPress()"/>
+                <input id="display" type="text" maxlength="30" style="text-align: right" name="display" value="{{result}}" onclick="this.select()"/>
                 <input class="calcButton" value="C" id="c" type="button" onclick="getElement().value=''"/>
                 <input class="calcButton" value="=" id="equals" type="submit" onclick="display('=')"/>
                 <input class="calcButton" value="1" id="one" type="button" onclick="getElement().value+='1'"/>
