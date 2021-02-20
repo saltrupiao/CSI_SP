@@ -31,11 +31,16 @@ function getElement(){  //inserts this line, makes the form information look cle
                 <input class="calcButton" value="-" id="minus" type="button" onclick="getElement().value+='-'"/>
                 <input class="calcButton" value="*" id="star" type="button" onclick="getElement().value+='*'"/>
                 <input class="calcButton" value="/" id="slash" type="button" onclick="getElement().value+='/'"/>
+                <input class="calcButton" value="(" id="parentheses" type="button" onclick="getElement().value+='('">
+                <input class="calcButton" value=")" id="parentheses2" type="button" onclick="getElement().value+=')'">
+                <input class="calcButton" value="%" id="percent" type="button" onclick="getElement().value+='%'">
+                <input class="calcButton" value="^" id="exponential" type="button" onclick="getElement().value+='^'">
             </form>
         </div>
         <div>
             <br>
             <a class="fancyButton" href="/">Go Home</a>
+            <!--<p id="answer">{{result}}</p>-->
         </div>
     </body>
 </html>

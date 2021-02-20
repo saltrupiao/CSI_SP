@@ -14,7 +14,7 @@ body
 .container
 {
     /*Center the calculator*/
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 4;
     /*Hack the size together. This is not a good way to do this honestly*/
     width: 40%;
@@ -24,7 +24,9 @@ body
     margin-top: 5%;
     /*Create the new grid to position the buttons*/
     display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
     grid-template-columns: 100px 100px 100px 100px;
+
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-row-gap: 10px;
     /*Final styling*/
@@ -43,10 +45,40 @@ body
     grid-row-start: 1;
 }
 
+.container>#parentheses
+{
+    grid-column-start: 5;
+    grid-row-start: 2;
+}
+
+.container>#parentheses2
+{
+    grid-column-start: 5;
+    grid-row-start: 3;
+}
+
+.container>#percent
+{
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+
+.container>#exponential
+{
+    grid-column-start: 5;
+    grid-row-start: 5;
+}
+
+.container>#display
+{
+    grid-column-start: 2;
+    grid-column-end: 6;
+  
 .container>#display
 {
     grid-column-start: 2;
     grid-column-end: 5;
+
     grid-row-start: 1;
 }
 
